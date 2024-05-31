@@ -26,8 +26,11 @@ public class goombamovement : MonoBehaviour
             newPos.x += -speed*Time.deltaTime;
             transform.position = newPos;
         }
-        if(transform.position.x >= 5){
+        if(transform.position.x >= rightbounds){
             movingright = false;
+        }
+        else if(transform.position.x <= leftbounds){
+         movingright = true;   
         }
     }
 }
